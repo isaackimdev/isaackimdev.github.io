@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
+    basePath: "/nextjs-github-pages",
     images: {
-        loader: 'custom',
-        loaderFile: './my-loader.ts',
-    }
+        unoptimized: true,
+    },
 };
 
 export default nextConfig;
