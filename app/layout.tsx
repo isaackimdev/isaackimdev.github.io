@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Jua } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const jua = Jua({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Isaac Kim's World",
-  description: "Isaac Kim's World, Web Site, Resume, Portfolio",
+  description: "Isaac Kim's World, Web Site, Resume, Portfolio, 백엔드 포트폴리오, 서버 개발자 포트폴리오",
 };
 
 export default function RootLayout({
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={jua.className}>{children}</body>
     </html>
   );
 }
