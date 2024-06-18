@@ -19,7 +19,6 @@ export default function Home() {
 
   return (
     <main className="p-4 select-none">
-      
       <nav className="p-4">
         <Link 
           className="text-blue-400"
@@ -79,6 +78,7 @@ export default function Home() {
             <li>사조그룹 15개 회사, 50여 개 사업장 HR 시스템 관리 운영</li>
             <li>사조그룹 연말정산 시스템 개발</li>
             <li>ERP HR 시스템 설계, 개발, 운영, Data Migration</li>
+            <li>선원인사급여 프로젝트 PL</li>
             <li>식자재유통관리시스템 운영 / 유지 보수</li>
             <li>선물 세트 주문관리 시스템 운영 / 유지 보수</li>
           </ul>
@@ -164,7 +164,6 @@ export default function Home() {
           <li>MyBatis, JPA</li>
           <li>Javascript / jQuery / JSP</li>
           <li>React / Next</li>
-          <li>Node.js</li>
           <li>Tailwind CSS</li>
         </ul>
       </section>
@@ -172,11 +171,11 @@ export default function Home() {
       <section className="p-4">
         <h2 className="text-2xl mb-2">프로젝트</h2>
         <div className="p-4">
-          <h3 className="text-xl">사조그룹 통합 ERP 구축 프로젝트</h3>
+          <h3 className="text-xl text-emerald-300">사조그룹 통합 ERP 구축 프로젝트</h3>
           <p>계열사들의 여러 인사급여 시스템을 하나로 통합 구축한 프로젝트</p>
           <p>2021년 1월 ~ 시스템 운영 및 추가 회사 통합 작업 진행중</p>
           <p>PL로 참여하여, 설계/개발/운영을 해오고 있습니다.</p>
-          <br />
+          
           <p>기술 스택 : </p>
           <p>Java/Spring/MyBatis/MSSQL/jQuery/Javascript</p>
           <p>성과 : </p>
@@ -187,26 +186,52 @@ export default function Home() {
         </div>
 
         <div className="p-4">
-          <h3 className="text-xl">비즈니스피플, 비플(beople), Side Project</h3>
+          <h3 className="text-xl text-emerald-300">선원 인사급여정산 차세대 시스템 구축 프로젝트</h3>
+          <p>선원 인사급여정산 차세대 시스템</p>
+          <p>기술 스택 : </p>
+          <p>Java/Spring/MyBatis/MSSQL/jQuery/Javascript</p>
+          <p>성과 : </p>
+          <ul className="list-disc list-inside">
+            <li>SPEC & 서버 개발</li>
+          </ul>
+        </div>
+
+        <div className="p-4">
+          <h3 className="text-xl text-emerald-300">비즈니스피플, 비플(beople), Side Project</h3>
           <p>지식 + E-커머스의 결합, 지식 커머스 플랫폼</p>
-          <p>지식을 공유하며 수익을 창출할 수 있는 플랫폼</p>
-          <p>REST API, 소셜 로그인, 결제 기능을 개발했습니다.</p>
-          <br />
+          <p>개인간 지식을 공유하며 수익을 창출하는 플랫폼</p>
           <p>기술 스택 : </p>
           <p>Java/SpringBoot/MySQL/JPA/SpringSecurity</p>
           <p>성과 : </p>
           <ul className="list-disc list-inside">
             <li>2300명↑ 사용자 가입</li>
-            <li>지속할 수 없는 BM으로 판단 후 서비스 종료</li>
+            <li>REST API, 소셜 로그인, 결제 기능 개발</li>
+            <li>서비스 종료</li>
           </ul>
         </div>
       </section>
 
       <section className="p-4">
         <h2 className="text-2xl mb-2">교육</h2>
+        <div className="p-4">
+          <h3 className="text-xl">자바 기반 웹 개발자 양성 과정</h3>
+          <p>Java, Spring 기반 웹 교육을 듣고, Spring 기반 웹 개발 프로젝트를 수행했습니다.</p>
+          <p>기관 : KGITBANK</p>
+          <p>기간 : 2018.04~2018.10</p>
+        </div>
       </section>
 
-      
+      <section className="p-4">
+        <h2 className="text-2xl mb-2">자격</h2>
+        <div className="p-4">
+          <h3 className="text-xl">정보처리기사</h3>
+          <p>한국산업인력공단</p>
+          <p>취득일 : 2020.08</p>
+          <p>자격번호 : 비공개</p>
+          <p>합격년월일 : 2020.08.28</p>
+          <p>발급년월일 : 2020.09.07</p>
+        </div>
+      </section>
     </main>
   );
 }

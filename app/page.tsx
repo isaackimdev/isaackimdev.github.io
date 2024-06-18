@@ -19,11 +19,41 @@ export default function Home() {
   return (
     <main className="text-center p-10 select-none">
       <p>안녕하세요. 김이삭입니다.</p>
-      <Link 
-        className="text-blue-400"
-        href={'/portfolio'}>
-        Portfolio
-      </Link>
+      
+      <ul>
+        <li>
+        <Link 
+          className="text-blue-400"
+          href={'/portfolio'}
+        >
+          Portfolio
+        </Link>
+        </li>
+        <li>
+          <Link
+            className="text-blue-400"
+            href={'https://github.com/isaackimdev'}
+          >
+            Github
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="text-blue-400"
+            href={'https://lifere.tistory.com'}
+          >
+            blog1
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="text-blue-400"
+            href={'https://blog.naver.com/isaac7263'}
+          >
+            blog2
+          </Link>
+        </li>
+      </ul>
     </main>
   );
 }
