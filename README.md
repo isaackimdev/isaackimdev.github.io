@@ -1,11 +1,18 @@
 # isaackimdev.github.io
-Isaac Kim's Next.js Page
+Isaac Kim's Website.
 
 1. Check node.js
 2. Create Project : `npx create-next-app@latest`
 3. Install Dependencies : `npm i`
+    - markdown 파싱 : `npm install remark remark-html`
 4. Run Project : `npm run dev` or `yarn dev` 
     - http://localhost:3000
+
+
+### To do list
+- [x] blog
+- [ ] markdownToHtml
+
 
 
 ### Static Exports 
