@@ -19,10 +19,9 @@ export default function Home() {
 
   return (
     <main className="flex md:flex-row p-4 select-none">
+      <aside className="hidden md:block md:w-1/5"></aside>
 
-      <aside className="hidden md:block md:w-1/4"></aside>
-
-      <div>
+      <div className="flex-grow">
         <nav className="p-4">
           <Link className="text-blue-400" href={'/'}>
             ◀
@@ -38,9 +37,10 @@ export default function Home() {
         <section className="p-4">
           <h2 className="text-2xl mb-2">About Me</h2>
           <p className="text-emerald-300">문제의 본질을 찾아 해결하는 개발자입니다.</p>
-          <p>현재 사조시스템즈에서 사조그룹의 ERP <span className="text-emerald-300"> HR 시스템</span>을 개발하고 있습니다.
+          <p>현재 사조시스템즈에서 사조그룹의 <span className="text-emerald-300">ERP HR 시스템</span>을 개발하고 있습니다.</p>
+          <p>
             <span className="text-emerald-300"> 사조그룹 계열사 15개 회사 50여 개 사업장</span>의 인사/급여, 연말정산 시스템을 개발/운영하고 있습니다.
-            업무 분야로는 인사, 근태, 급여, 상여, 연월차, 퇴직, <span className="text-emerald-300"> 연말정산, </span>ESS, MSS, 인사고과,
+            업무 분야는 인사, 근태, 급여, 상여, 연월차, 퇴직, <span className="text-emerald-300"> 연말정산, </span>ESS, MSS, 인사고과,
             EIS 등의 업무 분야를 관리하는 ERP HR 시스템을 개발을 하면서 신규 회사 시스템 통합을 할 때
             많은 문제에 직면하게 되는데, 문제의 본질을 찾아 분석하여 해결합니다.
           </p>
@@ -247,8 +247,7 @@ export default function Home() {
         </section>
       </div>
 
-      <aside className="hidden md:block md:w-1/4"></aside>
-
+      <aside className="hidden md:block md:w-1/5"></aside>
     </main>
   );
 }

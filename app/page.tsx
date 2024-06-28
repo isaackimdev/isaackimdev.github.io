@@ -17,20 +17,23 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="text-center p-10 select-none">
-      <p>안녕하세요. 김이삭입니다.</p>
-      
-      <ul>
-        <li>
-          <Link className="text-blue-400" href={'/portfolio'}>Portfolio</Link>
-        </li>
-        <li>
-          <Link className="text-blue-400" href={'https://github.com/isaackimdev'}>Github</Link>
-        </li>
-        <li>
-          <Link className="text-blue-400" href={'/posts'}>Blog</Link>
-        </li>
-      </ul>
+    <main className="flex p-4 select-none">
+      <aside className="hidden md:block md:w-1/5"></aside>
+
+      <section className="flex-grow">
+        <p>안녕하세요. 김이삭입니다.</p>
+        
+        <ul>
+          <li>
+            <Link className="text-blue-400" href={'/portfolio'}>Portfolio</Link>
+          </li>
+          <li>
+            <Link className="text-blue-400" href={'/posts'}>Blog</Link>
+          </li>
+        </ul>
+      </section>
+
+      <aside className="hidden md:block md:w-1/5"></aside>
     </main>
   );
 }

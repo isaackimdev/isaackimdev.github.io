@@ -44,16 +44,13 @@ export default async function Page({params}: {params: { slug: string} }) {
    const postData = await getPostData(params.slug);
 
     return (
-        <div className='flex'>
-            <aside className='hidden md:block md:w-1/5'>
-            </aside>
+        <div className='flex p-4'>
+            <aside className='hidden md:block md:w-1/5'></aside>
 
             <div className='p-4 flex-grow'>
 
                 <div>
-                <Link className="text-blue-400" href={'/posts'}>
-                    ◀
-                </Link>
+                    <Link className="text-blue-400" href={'/posts'}>◀</Link>
                 </div>
 
                 <h1 className='text-4xl text-center'>{postData.title}</h1>
@@ -61,8 +58,7 @@ export default async function Page({params}: {params: { slug: string} }) {
                 <div dangerouslySetInnerHTML={{ __html: postData.content }} />
             </div>
 
-            <aside className='hidden md:block md:w-1/5'>
-            </aside>
+            <aside className='hidden md:block md:w-1/5'></aside>
         </div>
     );
 }

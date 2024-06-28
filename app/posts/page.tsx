@@ -32,15 +32,12 @@ export default function Page() {
     });
 
     return (
-        <div className='flex'>
+        <div className='flex p-4'>
             <aside className='hidden md:block md:w-1/5'></aside>
 
             <div className='flex-grow p-4'>
                 <header className='mb-4'>
-                    <Link 
-                        href={'/'}
-                        className='text-blue-400'
-                    >
+                    <Link href={'/'}className='text-blue-400'>
                         Home
                     </Link>
                 </header>
