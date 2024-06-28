@@ -13,13 +13,14 @@ const postsDirectory = path.join(process.cwd(), 'posts');
 
 export default function Page() {
     const fileNames = fs.readdirSync(postsDirectory);
+    
     const allPostsData : Post[] = fileNames.map(fileName => {
         const id = fileName.replace(/\.md$/,'');
         const fullPath = path.join(postsDirectory, fileName);
         const fileContents = fs.readFileSync(fullPath, 'utf8');
         
         // OS에 따라 다른 캐리지 리턴 문자 처리
-        const match = fileContents.match(/---\s*title: (.+)\s*date: (.+)\r\n---/);
+        const match = fileContents.match(/---\s*title: (.+)\s*date: (.+)\s*---/);
         const title = match ? match[1] : 'Untitled';
         const date = match ? match[2] : 'Unknown date';
 
@@ -43,7 +44,6 @@ export default function Page() {
                         Home
                     </Link>
                 </header>
-
                 <ul>
                 {allPostsData.map(({id, title, date})=>(
                     <li key={id}>
