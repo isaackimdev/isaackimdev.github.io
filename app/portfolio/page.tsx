@@ -20,9 +20,7 @@ export default function Home() {
   return (
     <main className="flex md:flex-row p-4 select-none">
 
-      <aside className="hidden md:block md:w-1/4">
-        
-      </aside>
+      <aside className="hidden md:block md:w-1/4"></aside>
 
       <div>
         <nav className="p-4">
@@ -249,9 +247,7 @@ export default function Home() {
         </section>
       </div>
 
-      <aside className="hidden md:block md:w-1/4">
-        
-      </aside>
+      <aside className="hidden md:block md:w-1/4"></aside>
 
     </main>
   );

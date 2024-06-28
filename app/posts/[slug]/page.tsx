@@ -40,7 +40,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default async function Pages({params}: {params: { slug: string} }) {
+export default async function Page({params}: {params: { slug: string} }) {
    const postData = await getPostData(params.slug);
 
     return (
@@ -51,7 +51,7 @@ export default async function Pages({params}: {params: { slug: string} }) {
             <div className='p-4 flex-grow'>
 
                 <div>
-                <Link className="text-blue-400" href={'/blog'}>
+                <Link className="text-blue-400" href={'/posts'}>
                     ◀
                 </Link>
                 </div>

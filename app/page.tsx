@@ -28,7 +28,7 @@ export default function Home() {
           <Link className="text-blue-400" href={'https://github.com/isaackimdev'}>Github</Link>
         </li>
         <li>
-          <Link className="text-blue-400" href={'/blog'}>Blog</Link>
+          <Link className="text-blue-400" href={'/posts'}>Blog</Link>
         </li>
       </ul>
     </main>
