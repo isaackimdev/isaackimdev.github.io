@@ -38,18 +38,10 @@ export default function Home() {
           <h2 className="text-2xl mb-2">About Me</h2>
           <p className="text-emerald-300">문제의 본질을 찾아 해결하는 개발자입니다.</p>
           <p>현재 사조시스템즈에서 사조그룹의 <span className="text-emerald-300">ERP HR 시스템</span>을 개발하고 있습니다.</p>
-          <p>
-            <span className="text-emerald-300"> 사조그룹 계열사 15개 회사 50여 개 사업장</span>의 인사/급여, 연말정산 시스템을 개발/운영하고 있습니다.
-            업무 분야는 인사, 근태, 급여, 상여, 연월차, 퇴직, <span className="text-emerald-300"> 연말정산, </span>ESS, MSS, 인사고과,
-            EIS 등의 업무 분야를 관리하는 ERP HR 시스템을 개발을 하면서 신규 회사 시스템 통합을 할 때
-            많은 문제에 직면하게 되는데, 문제의 본질을 찾아 분석하여 해결합니다.
-          </p>
-
+          <p className="text-emerald-300">사조그룹 계열사 15개 회사 50여 개 사업장의 인사/급여, 연말정산 시스템을 개발/운영하고 있습니다.</p>
+          <p>ERP HR 시스템을 통합할 때 많은 문제에 직면하게 되는데, 문제의 본질을 찾아 분석하여 해결해 나아가고 있습니다.</p>
           <p className="mt-4 text-emerald-300">소통하는 개발자입니다.</p>
-          <p>문제의 본질을 찾아 해결하려면 올바른 소통은 필수적입니다. 
-            현업 업무 담당자, 동료 개발자 분들과 문제를 해결하기 위해
-            끊임없이 소통하며 나아갑니다.
-          </p>
+          <p>문제의 본질을 찾아 해결하기 위해 문제의 이해 관계자와 끊임없이 소통하며 나아갑니다.</p>
 
         </section>
 
