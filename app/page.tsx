@@ -28,7 +28,16 @@ export default function Home() {
             <Link className="text-blue-400" href={'/portfolio'}>Portfolio</Link>
           </li>
           <li>
-            <Link className="text-blue-400" href={'/posts'}>Blog</Link>
+            <Link className="text-blue-400" href={'/posts'}>Posts</Link>
+          </li>
+          <li>
+            <Link className="text-blue-400" href={"https://github.com/isaackimdev"}>Github</Link>
+          </li>
+          <li>
+            <Link className="text-blue-400" href={"https://lifere.tistory.com"}>Tistory</Link>
+          </li>
+          <li>
+            <Link className="text-blue-400" href={"https://blog.naver.com/isaac7263"}>Naver</Link>
           </li>
         </ul>
       </section>

@@ -47,7 +47,7 @@ export default async function Page({params}: {params: { slug: string} }) {
         <div className='flex p-4'>
             <aside className='hidden md:block md:w-1/5'></aside>
 
-            <div className='p-4 flex-grow'>
+            <div className='p-10 flex-grow'>
 
                 <div>
                     <Link className="text-blue-400" href={'/posts'}>◀</Link>
