@@ -22,6 +22,6 @@ date: 2025-07-05
 
 제가 좋아하는 문구가 있습니다.
 
-`Simple is best`
+**Simple is best**
 
 이번에 만든 GitHub Pages 블로그는 이 문구처럼 운영하려고 합니다.
