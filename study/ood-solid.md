@@ -32,8 +32,32 @@ https://wikidocs.net/350437
 - DIP : Dependency Inversion Principle
 
 
-### 1. SRP: 단일 책임 원칙
-### 2. OCP: 개방-폐쇄 원칙
-### 3. LSP: 리스코프 치환 원칙
-### 4. ISP: 인터페이스 분리 원칙
-### 5. DIP: 의존성 역전 원칙
+### 1. SRP: 단일 책임 원칙 (Single Responsibility Principle)
+
+`한 클래스는 하나의 책임만 가져야 한다.`
+
+
+
+### 2. OCP: 개방-폐쇄 원칙 (Open-Closed Principle)
+
+`확장에는 열려 있어야 하고, 변경에는 닫혀 있어야 한다.`
+
+
+
+### 3. LSP: 리스코프 치환 원칙 (Liskov Substitution Principle)
+
+`자식 클래스는 언제나 부모 클래스를 대체할 수 있어야 한다.`
+
+
+
+### 4. ISP: 인터페이스 분리 원칙 (Interface Segregation Principle)
+
+`범용 인터페이스 하나보다, 구체적인 여러 개의 인터페이스가 낫다.`
+
+
+
+### 5. DIP: 의존성 역전 원칙 (Dependency Inversion Principle)
+
+`추상화에 의존해야지, 구체화에 의존하면 안 된다.`
+
+
