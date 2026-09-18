@@ -2,8 +2,8 @@
 
 이전에 운영했던 블로그 입니다. 기술과 일상 글이 혼재되어 있는 블로그로 현재는 글을 잘 쓰고 있지는 않습니다. 
 
-- https://lifere.tistory.com
-- https://blog.naver.com/isaac7263
+- [https://lifere.tistory.com](https://lifere.tistory.com)
+- [https://blog.naver.com/isaac7263](https://blog.naver.com/isaac7263)
 
 블로그를 운영했엇지만 Github에서 드러내지 않은 이유는 ai가 등장하면서 검색 시장이 블로그에서 LLM AI 검색으로 많이 이동했던 것과 나 또한 AI 검색을 더 많이 하게 되면서 블로그의 가치가 떨어지고 있다고 생각해 글을 쓰지 않게 되었던 것 같습니다.
 
@@ -15,9 +15,9 @@
 
 ---
 
-### List
+### log
 - [study](./study/page.md)
 
 ### contact
-- https://github.com/isaackimdev
+- [https://github.com/isaackimdev](https://github.com/isaackimdev)
 - email: isaac7263@naver.com
