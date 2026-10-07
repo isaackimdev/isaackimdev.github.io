@@ -2,15 +2,13 @@
 
 글 들어가기에 앞서...
 
-이 글은 다시 복습하고자 작성하는 글입니다. 과거에 알았던 내용이지만 최근 누가 물어봤을 때 대답하지 못했기 때문에 제가 까먹었다고 봐야겠죠. (26.09) 어쨌든 글 쓰는 이유는 복습입니다.
+이 글은 복습하기 위해 작성한 글입니다. 참고 문서 링크는 하단에 명시하였습니다. 중간에 주관적인 내용이 포함될 수 있습니다.
+
 
 ## 객체지향 설계 : SOLID
 
-
 `SOLID는 객체지향 설계(Object-Oriented Design)를 할 때 지켜야 할 다섯 가지 핵심 원칙의 앞글자를 딴 약어다. 2000년대 초반, 소프트웨어 공학의 거장인 로버트 마틴(Robert C. Martin, 일명 Uncle Bob)이 정리했다.
 `
-
-[위키독스 - 객체지향 설계의 5대 원칙 : SOLID](https://wikidocs.net/350437)
 
 객체지향 설계의 5원칙은 소프트웨어를 쉽게 이해하고 유지보수하며 확장할 수 있도록 돕는 지침인 SOLID를 말합니다. 
 
@@ -58,8 +56,6 @@ class ProductPrinter { // 출력(UI) 로직 담당
 }
 ```
 
-※ 위 내용까지는 위키독스의 설명
-
 spring 기반 개발을 하게 되면 DTO, VO, Entity, Repository, DAO, Mapper, Service, ServiceImpl, Controller, Util 등의 다양한 클래스를 두어서 관리하고 사용하는 이유라고 생각합니다. 각각의 역할과 책임(기능)을 나누는 것이죠.
 
 결과적으로
@@ -72,6 +68,46 @@ spring 기반 개발을 하게 되면 DTO, VO, Entity, Repository, DAO, Mapper, 
 ### 2. OCP: 개방-폐쇄 원칙 (Open-Closed Principle)
 
 `확장에는 열려 있어야 하고, 변경에는 닫혀 있어야 한다.`
+
+- 의미 : 기존의 코드를 수정하지 않고도 새로운 기능을 추가할 수 있어야 한다.
+- 공학적 이점 : 상속과 인터페이스가 이 원칙을 지키는 핵심 도구다. 새로운 요구사항이 올 때마다 기존의 검증된 코드를 뜯어고치는 위험을 방치한다.
+
+매개변수 다형성이 이 원칙의 핵심이다. 새로운 기계가 추가될 때 기존 `Manager` 클래스의 코드를 수정하지 않고도 기능을 확장할 수 있어야 한다.
+
+```java
+class Machine {
+    String name;
+    public Machine(String name) { this.name = name; }
+    // 부모 클래스의 기본 동작
+    public void run() {
+        System.out.println(name + " 작동 시작.");
+    }
+}
+
+// [OCP 준수] 새로운 자식이 추가되어도 기존 Manager 코드는 수정하지 않는다.
+class Manager {
+    void repair(Machine m) {    // Machine이라는 추상 타입에 의존
+        m.run();
+    }
+}
+
+class Press extends Machine {
+    public Press() { super("프레스"); }
+    
+    @Override
+    public void run() {
+        System.out.println(name + "금속 성형 시작");
+    }
+}
+
+// 새로운 기계 추가 시, 기존 코드는 건드리지 않고 '확장'만 수행한다.
+class ThreeDPrinter extends Machine {
+    @Override
+    public void run() { 
+        System.out.println("3D 프린팅 중..."); 
+    }
+}
+```
 
 
 
@@ -92,3 +128,7 @@ spring 기반 개발을 하게 되면 DTO, VO, Entity, Repository, DAO, Mapper, 
 `추상화에 의존해야지, 구체화에 의존하면 안 된다.`
 
 
+
+#### 참고
+
+- [위키독스 - 객체지향 설계의 5대 원칙 : SOLID](https://wikidocs.net/350437)
