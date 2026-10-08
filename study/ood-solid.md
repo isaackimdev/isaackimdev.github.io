@@ -80,7 +80,7 @@ class Machine {
     public Machine(String name) { this.name = name; }
     // 부모 클래스의 기본 동작
     public void run() {
-        System.out.println(name + " 작동 시작.");
+        System.out.println(name + " start!");
     }
 }
 
@@ -92,21 +92,44 @@ class Manager {
 }
 
 class Press extends Machine {
-    public Press() { super("프레스"); }
+    public Press() { super("Press"); }
     
     @Override
     public void run() {
-        System.out.println(name + "금속 성형 시작");
+        System.out.println(name + " start");
     }
 }
 
 // 새로운 기계 추가 시, 기존 코드는 건드리지 않고 '확장'만 수행한다.
 class ThreeDPrinter extends Machine {
+    public ThreeDPrinter() { super("3D printer"); }
+
     @Override
     public void run() { 
-        System.out.println("3D 프린팅 중..."); 
+        System.out.println(name + " start..."); 
     }
 }
+
+class Main {
+    public static void main(String[] args) {
+        Manager manager = new Manager();
+
+        Machine mc = new Machine("Computer");
+        Machine press = new Press();
+        ThreeDPrinter threed = new ThreeDPrinter();
+        
+        manager.repair(mc);
+        manager.repair(press);
+        manager.repair(threed);
+    }
+}
+```
+
+#### 실행결과
+```
+Computer start!
+Press start
+3D printer start...
 ```
 
 
@@ -115,17 +138,61 @@ class ThreeDPrinter extends Machine {
 
 `자식 클래스는 언제나 부모 클래스를 대체할 수 있어야 한다.`
 
+- 의미 : 부모 타입의 참조 변수로 자식 객체를 사용할 때(업캐스팅), 프로그램의 논리적 엄밀함이 깨지지 않아야 한다.
+- 공학적 이점 : 다형성의 안정성을 보장한다. 사용자는 부모의 이름표를 보고 객체를 믿고 사용할 수 있다.
+
+오버라이딩 규칙을 준수해야 한다. 부모 타입인 Machine 자리에 어떤 자식(Lathe, Drill)을 넣어도 프로그램의 논리가 깨지지 않아야 한다. 자식이 부모의 의도와 완전히 다른 행동을 한다면 다형성의 신뢰가 무너진다.
+
+```java
+// [LSP 준수] 부모가 할 수 있는 일은 자식도 할 수 있어야 한다.
+public void testMachine(Machine m) {
+    // m이 누구든 '작동한다(run)'는 부모의 약속을 지켜야 한다.
+    m.run(); 
+}
+```
 
 
 ### 4. ISP: 인터페이스 분리 원칙 (Interface Segregation Principle)
 
 `범용 인터페이스 하나보다, 구체적인 여러 개의 인터페이스가 낫다.`
 
+- 의미 : 자신이 사용하지 않는 메서드에 의존하도록 강제해서는 안 된다.
+- 공학적 이점 : '다중 구현'의 근거가 된다. 인터페이스를 잘게 쪼개면 구현 클래스가 꼭 필요한 '역할'만 수행할 수 있어 시스템이 가벼워진다.
 
+범용 인터페이스 하나에 모든 기능을 넣기보다 여러 개로 쪼개는 것이 좋다. 그래야 특정 기능만 필요한 객체가 사용하지도 않는 메서드를 억지로 구현하는 상황을 방지할 수 있다.
+
+```java
+// [ISP 준수] 필요한 기능만 선택해서 구현할 수 있게 쪼갠다.
+interface Camera { void takePhoto(); }
+interface MusicPlayer { void playMusic(); }
+
+// 액션캠은 음악 재생 기능이 필요 없으므로 Camera만 구현한다.
+class ActionCam implements Camera { 
+    public void takePhoto() { System.out.println("사진 촬영"); }
+}
+```
 
 ### 5. DIP: 의존성 역전 원칙 (Dependency Inversion Principle)
 
 `추상화에 의존해야지, 구체화에 의존하면 안 된다.`
+
+- 의미 : 고수준 모듈(사용자)은 저수준 모듈(부품)의 구체적인 이름에 의존하지
+- 공학적 이점 : '느슨한 결합'의 핵심 원칙이다. 부품을 갈아 끼우기 쉬운 구조를 만든다.
+
+'느슨한 결합'을 실현하는 원칙이다. 상위 모듈이 하위 모듈의 구체적인 이름을 부르는 대신, 추상적인 인터페이스를 바라보게 하여 부품 교체가 용이한 구조를 만든다.
+
+
+```java
+// [DIP 준수] 구체 클래스가 아닌 인터페이스에 의존한다.
+class Worker {
+    private Tool tool; // Hammer가 아닌 Tool(인터페이스)에 의존
+
+    public Worker(Tool tool) { // 외부에서 주입(DI)받는다.
+        this.tool = tool;
+    }
+}
+
+```
 
 
 
